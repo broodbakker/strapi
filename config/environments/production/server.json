@@ -1,14 +1,10 @@
 {
-  "host": "localhost",
-  "port": "${process.env.PORT || 1337}",
-  "production": true,
-  "proxy": {
-    "enabled": false
-  },
-  "cron": {
+  "host": "${process.env.APP_HOST || '127.0.0.1'}",
+  "port": "${process.env.NODE_PORT || 1337}",
+  "autoReload": {
     "enabled": false
   },
   "admin": {
-    "autoOpen": false
+    "path": "/dashboard"
   }
 }
